@@ -1,0 +1,672 @@
+@import "colors"
+@import "test"
+@import "reset"
+@import "catalog-page"
+@import "contact-page"
+@import "about-us"
+@import "faq"
+
+// main.sass created by plaguin to vscode "Live Sass Compliler" v3.0.0
+
+@font-face
+	font-family: 'nether'
+	src: url('../fonts/nether-new/nether.eot')
+	src: local('Nether'), url('../fonts/nether-new/nether.woff') format('woff'), url('../fonts/nether-new/nether.ttf') format('truetype'), url('../fonts/nether-new/nether.svg') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face 
+	font-family: 'Circe'
+	src: url('../fonts/Circe/Circe-Regular.eot')
+	src: local('Circe'), local('../fonts/Circe/Circe-Regular'), url('../fonts/Circe/Circe-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe/Circe-Regular.woff') format('woff'), url('../fonts/Circe/Circe-Regular.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+@font-face 
+	font-family: 'Circe'
+	src: url('../fonts/Circe/Circe-Bold.eot')
+	src: local('Circe Bold'), local('Circe-Bold'), url('../fonts/Circe/Circe-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe/Circe-Bold.woff') format('woff'),url('../fonts/Circe/Circe-Bold.ttf') format('truetype')
+	font-weight: bold
+	font-style: normal
+
+@font-face 
+	font-family: 'Circe'
+	src: url('../fonts/Circe/Circe-Light.eot')
+	src: local('Circe Light'), local('Circe-Light'), url('../fonts/Circe/Circe-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe/Circe-Light.woff') format('woff'), url('../fonts/Circe/Circe-Light.ttf') format('truetype')
+	font-weight: 300
+	font-style: normal
+
+
+// global
+html
+    font-size: 14px
+    scroll-behavior: smooth
+body
+    font-family: "Circe", sans-serif
+    color: $dark-gray-text
+    background: $bg-color
+    padding: 19px 15px
+    font-weight: 400
+img
+    max-width: 100%
+    height: auto
+a
+    color: $dark-gray-text
+a:hover
+    text-decoration: none
+    color: $dark-gray-text
+a:focus, button:focus
+    border: 0
+    outline: 0
+li
+    a
+        text-transform: uppercase
+        font-weight: 300
+.hidden
+    overflow: hidden
+.button
+    width: 289px
+    height: 40px
+    border-radius: 100px
+    background: $blue-button
+    box-sizing: border-box
+    display: block
+    text-align: center
+    text-transform: uppercase
+    margin: 0 auto
+    font-weight: 400
+    p
+        color: $white-text
+.title
+    font-size: 24px
+    text-transform: uppercase
+    color: $light-gray-text
+    font-weight: bold
+    text-align: left
+    display: block
+    margin-bottom: 30px
+    @media ( max-width: 768px )
+        margin-bottom: 50px        
+.slogan
+    font-family: "Nether"
+    font-size: 50px
+    display: flex
+    justify-content: center
+    text-align: end
+    color: $black-text
+    font-weight: 500
+.container
+    margin-bottom: 50px
+i, svg
+    color: black
+.social
+    text-align: center
+    a
+        display: inline-block
+        text-align: center
+        width: 45px
+        height: 45px
+        border: 1px solid gray
+        border-radius: 50%
+        padding: 10px 0 0 1px
+        margin: 0 5px
+        svg
+            font-size: 21px
+div[class|="contact"]
+    text-transform: none
+    font-size: 16px
+    p
+        display: inline-block
+        margin-left: 15px
+    p, svg, i
+        display: inline-block
+.bradcrumb
+    margin-bottom: 32px
+    color: $light-gray-text
+    .breadcrumb-item
+        display: inline-block
+        text-transform: uppercase
+        a
+            text-decoration: underline
+form
+    input, textarea
+        margin-bottom: 18px
+        border-radius: 20px
+        border: 1px solid gray
+        height: 40px
+        padding-left: 19px
+        opacity: 0.6
+    input[type="submit"]
+        background: $pink-button
+        color: $white-text
+        text-transform: uppercase
+        opacity: 1
+        margin-bottom: 0
+        padding: 0
+.owl-carousel
+    .owl-dots
+        margin-top: 17px
+        text-align: center
+        button
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background-color: $light-gray-text
+            margin-right: 7px
+        .active
+            background-color: $dark-gray-text
+// navbar
+.show + .shadow
+    position: absolute
+    width: 100%
+    height: 100%
+    background: #000000ad
+    z-index: 49
+    left: 0
+    top: 0
+.navbar
+    display: block
+    transition: all 0s ease
+    position: absolute
+    background: white
+    top: 0
+    right: 0
+    text-align: center
+    padding: 100px 40px 50px
+    z-index: 50
+    border-radius: 0 0 0 10px
+    overflow: scroll
+    height: 100vh
+    ul
+        margin-bottom: 115px
+        font-size: 18px
+        li
+            margin-bottom: 35px
+    .contact-top
+        margin-bottom: 55px
+        div
+            padding-bottom: 20px
+// header
+header
+    // margin-bottom: 30px
+    .logo
+        margin-right: 15px
+    .nav-right-block
+        margin-top: 20px
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        a
+            padding: 0 5px
+            &:first-child
+                border-right: 1px solid gray
+        .disabled
+            color: $light-gray-text
+            pointer-events: none
+            cursor: default
+        button
+            position: relative
+            z-index: 100
+            display: inline-block
+            width: 27px
+            height: 23px
+            margin-left: 35px
+            padding: 0
+            font-size: 30px
+            bottom: 3px
+            .open-burger
+                display: block
+            .close-burger
+                width: 21px
+                display: none
+        .basket
+            width: 30px
+            margin-left: 20px
+            svg
+                font-size: 20px
+                margin-bottom: 5px
+    .navbar-top
+        margin-top: 25px
+        li
+            display: inline-block
+            margin: 0 15px
+// baner-block
+.wrapper
+    .baner-carousel.mobile-block
+        color: $white-text
+        text-transform: uppercase
+        font-weight: bold
+        .first-carousel
+            position: relative
+            div[class|="baner"]
+                margin-top: 44px
+                position: relative
+                text-transform: uppercase
+                font-weight: bold
+                .hidden
+                    display: block
+                    height: 233px
+                    margin-bottom: 19px
+                    p
+                        position: absolute
+                        left: 20px
+                        top: 40px
+                        font-size: 20px
+                .button
+                    display: block
+                    margin: 0 auto
+                    p
+                        padding-top: 14px
+                        font-size: 16px
+
+.baner-first, .tablet-baner-one
+    &::before
+        content: ""
+        background-image: url(../img/new.png)
+        background-size: contain
+        position: absolute
+        left: 10px
+        top: -35px
+        width: 69px
+        height: 69px
+// .baner-second, .tablet-baner-two
+//     &::before
+//         content: ""
+//         background-image: url(../img/sale.png)
+//         background-size: contain
+//         position: absolute
+//         right: 10px
+//         top: -35px
+//         width: 64px
+//         height: 64px
+.wrapper
+    .tablet-baner
+        text-transform: uppercase
+        color: $white-text
+        font-weight: bold
+        div[class|="tablet-baner"]
+            background-size: 100% 100%
+            height: 320px
+            @media ( min-width: 992px )
+                height: 470px
+        .tablet-baner-one
+            background: url(../img/poster-1.png)
+        .tablet-baner-two
+            background: url(../img/poster-2.png)
+        div[class|="tablet-baner"]
+            p
+                position: absolute
+            .button
+                position: absolute
+                bottom: 20px
+                left: 0
+                right: 0
+                width: 200px
+                height: 40px
+                p
+                    position: static
+                    margin: 15px 0
+        .tablet-baner-one
+            p
+                left: 10px
+                top: 30px
+        .tablet-baner-two
+            p
+                right: 32px
+                bottom: 123px
+.baner
+    margin-bottom:  50px
+    @media ( min-width: 768px ) and (max-width: 992px )
+        .slogan
+            font-size: 40px
+// print-block
+.print-block
+    text-align: center
+    position: relative
+    img
+        margin-bottom: 19pxs
+    p
+        font-size: 16px
+        color: $light-gray-text
+        margin-bottom: 28px 
+        text-align: left
+    .button
+        background: $pink-button
+        color: $white-text
+        padding: 14px
+        @media ( max-width: 798 )
+            margin: 0 15px
+        p
+            color: $white-text
+            text-align: center
+// catalog-block
+.catalog-block
+    .slogan
+        text-align: center
+        font-size: 30px
+        margin-bottom: 35px
+    .catalog-card
+        position: relative
+        padding: 0 61px
+        font-weight: 500
+        text-transform: uppercase
+        color: $dark-gray-text
+        img
+            margin-bottom: 18px
+            box-shadow: 0 4px 11px 0 $box-shadow
+        p
+            line-height: 1.5rem
+        &:before
+            content: ""
+            background-size: contain
+            position: absolute
+            left: 30px
+            top: 0
+            width: 69px
+            height: 69px
+    .button
+        p
+            margin-top: 14px
+    .catalog-card.card-1:before
+        background-image: url(../img/top.png)
+    .catalog-card.card-2:before
+        background-image: none
+    .second-carousel
+        margin-bottom: 26px
+        .owl-nav
+            button
+                width: 28px
+                height: 28px
+                position: absolute
+                border-radius: 50%
+                background: #ebebeb
+                &::before
+                    content: ""
+                    position: absolute
+                    display: inline-block
+                    width: 10px
+                    height: 10px
+                    border-left: 3px solid #888888
+                    border-bottom: 3px solid #888888
+                    transform: rotate(45deg)
+                    left: 10px
+                    top: 10px
+            .owl-prev
+                left: 15px
+                top: 40%
+                &::before
+                    transform: rotate(45deg)
+            .owl-next
+                right: 15px
+                top: 40%
+                &::before
+                    transform: rotate(225deg)
+.tablet-cotalog
+    padding: 0
+    img
+        box-shadow: 0 0 0 0 #ffffff
+    &:before
+        left: 10px
+        top: -30px
+// business-card
+.business-card-block
+    img
+        margin-bottom: 32px
+    p
+        margin-bottom: 33px
+        color: $light-gray-text
+    .button
+        padding-top: 14px
+        background-color: $pink-button
+        @media ( min-width: 768px)
+            width: 200px
+            margin: 0 15px
+        p
+            color: $white-text
+// form-block
+.form-block
+    .title
+        font-size: 18px
+    img
+        margin-bottom: 32px
+// reviews-block
+.reviews-block
+    .title
+        text-align: center
+    .portrait
+        display: inline-block
+        width: 65px
+        height: 65px
+        border-radius: 50%
+        background-image: url(../img/reviews-face.jpg)
+        background-position: 40% 10%
+        position: relative
+        margin-bottom: 15px
+        &:after
+            content: ""
+            position: absolute
+            right: 0
+            bottom: 0
+            width: 17px
+            height: 17px
+            background-image: url(../img/twitter-color.png)
+    .reviews-data
+        display: inline-block
+        text-align: left
+        line-height: 1.4rem
+        font-size: 16px
+        font-weight: 400
+        margin-bottom: 20px
+        time
+            font-size: 14px
+            font-weight: 300
+    .review
+        margin: 10px 10px
+        padding: 40px
+        border-radius: 40px 40px
+        box-shadow: 0 0 20px 0 $box-shadow
+        min-height: 200px
+        display: flex
+        flex-flow: column
+        justify-content: space-between
+        p
+            margin-bottom: 25px
+        .stars
+            display: inline-block
+            width: 100%
+            height: 20px
+            background-image: url(../img/5-stars.png)
+            background-position-x: 50%
+            background-repeat: no-repeat
+    .third-carousel        
+        .owl-nav
+            button
+                width: 27px
+                height: 27px
+                position: absolute
+                border: 1px solid gray
+                border-radius: 50%
+                top: 40%
+                &::before
+                    content: ""
+                    display: inline-block
+                    width: 8px
+                    height: 8px
+                    border-left: 1px solid #000000
+                    border-top: 1px solid #000000
+                    transform: rotate(-45deg)
+                    margin-left: 3px
+                    left: 1px
+                &:first-child
+                    left: -10%
+                &:last-child
+                    right: -10%
+                    &::before
+                        transform: rotate(135deg)
+                        margin-left: 0
+                        margin-right: 3px
+// footer
+footer
+    .container
+        margin-bottom: 0
+    .slogan
+        text-transform: none
+        font-size: 30px
+        margin-bottom: 30px
+    .links-block
+        text-transform: uppercase
+        text-align: center
+        a,p
+            display: block
+            margin-bottom: 25px
+        p
+            color: $light-gray-text
+        .help
+            margin-bottom: 20px
+        .contact-bottom
+            margin-bottom: 25px
+            p
+                display: inline-block
+                margin-bottom: 21px
+        .social
+            a
+                display: inline-block
+
+// Extra small devices (portrait phones, less than 576px)
+@media (min-width: 575.98px)
+    body
+
+// Small devices (landscape phones, less than 768px)
+@media (min-width: 767.98px)
+    .container
+        margin-bottom: 150px
+    header
+        margin-bottom: 40px
+        .container
+            margin-bottom: 45px
+    .wrapper
+        .slogan
+            p
+                margin: 46px 0
+        .tablet-baner
+            div[class|="tablet-baner"]
+                &::before
+                    top: -25px
+            .tablet-baner-one::before
+                width: 50px
+                height: 50px
+            .tablet-baner-two
+                text-align: end
+                ::before
+                    width: 45px
+                    height: 45px
+        .print-block
+            text-align: left
+            .button
+                width: 200px
+        .catalog-block
+            .catalog-way
+                padding-top: 4rem
+                .slogan
+                    padding-bottom: 2rem
+                .button
+                    width: 200px
+                    p
+                        padding-top: 14px
+            .catalog-card
+                text-align: center
+                padding: 0
+                img
+                    margin-bottom: 16px
+                p
+                    line-height: 1.5rem
+                    text-align: left
+    footer
+        .links-block
+            p, a
+                margin-bottom: 21px
+        .slogan
+            font-size: 3.5rem
+            margin-bottom: 3rem
+        .menu
+            text-align: left
+        .contact-bottom
+            text-align: left
+            font-size: 13px
+            &.right
+                text-align: right
+        .tablet
+            text-transform: uppercase
+            color: $light-gray-text
+            display: flex
+            align-items: flex-end
+// Medium devices (tablets, less than 992px)
+@media (min-width: 991.98px)
+    header
+        margin-bottom: 45px
+    .wrapper
+        .slogan
+            p
+                font-size: 55px
+        .tablet-baner
+            font-size: 24px
+            div[class|="tablet-baner"]
+                &::before
+                    top: -25px
+                .button
+                    p
+                        margin: 14px 0
+                        font-size: 16px
+            .tablet-baner-one
+                p
+                    left: 10px
+                    top: 40px
+            .tablet-baner-two
+                p
+                    right: 45px
+                    bottom: 165px
+            .tablet-baner-one::before
+                width: 69px
+                height: 69px
+            .tablet-baner-two::before
+                width: 64px
+                height: 64px
+        .print-block
+            .content
+                margin: 4rem 0 0
+            .button
+                position: absolute
+                left: 3rem
+                bottom: 1rem
+        .catalog-block
+            .catalog-way
+                padding-top: 7rem
+                .slogan
+                    font-size: 54px
+        .form-block
+            .title
+                font-size: 24px
+    footer
+        .slogan
+            font-size: 3.5rem
+        .contact-bottom
+            font-size: 16px
+
+// Large devices (desktops, less than 1200px)
+@media (min-width: 1199.98px)
+    .wrapper
+        .tablet-baner
+            .tablet-baner-one
+                p
+                    left: 10px
+                    top: 45px
+            .tablet-baner-two
+                p
+                    right: 55px
+                    bottom: 200px
+        .print-block
+            .content
+                margin: 5rem 0 0
+            .button
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

@@ -1,0 +1,101 @@
+// catalog
+// breadcrumb
+.container.catalog-filters
+    margin-bottom: 40px
+    .slogan
+        font-size: 45px
+        margin-bottom: 42px
+    .catalog-carousel
+        .new-category
+            border: 1px solid black
+            border-radius: 20px
+            padding: 10px 0px
+            text-align: center
+            text-transform: uppercase
+        .owl-nav
+            button
+                width: 25px
+                height: 25px
+                position: absolute
+                border: 1px solid gray
+                border-radius: 50%
+                top: 10%
+                &::before
+                    content: ""
+                    display: inline-block
+                    width: 8px
+                    height: 8px
+                    border-left: 1px solid #000000
+                    border-top: 1px solid #000000
+                    transform: rotate(-45deg)
+                    margin-left: 3px
+                    left: 1px
+                &:first-child
+                    left: -10%
+                &:last-child
+                    right: -10%
+                    &::before
+                        transform: rotate(135deg)
+                        margin-left: 0
+                        margin-right: 3px
+.container.cotalog-main
+    margin-bottom: 85px
+    .cotalog-item
+        margin-bottom: 27px
+        img
+            box-shadow: 0 5px 10px 0px $box-shadow
+            margin-bottom: 10px
+        p
+            font-weight: 500
+            text-transform: uppercase
+            line-height: 1.2rem
+    .button
+        background-color: #ffffff
+        border: 1px solid grey
+        p
+            color: $dark-gray-text
+            margin-top: 14px
+.container.inst-block
+    margin-bottom: 50px
+    title
+        font-size: 20px
+        font-weight: bold
+        text-align: center
+        margin-bottom: 44px
+    .inst-carousel
+        margin-bottom: 33px
+        img
+            margin-bottom: 15px
+        p
+            font-weight: 500
+            text-transform: uppercase
+            color: $light-gray-text
+        .owl-nav
+            button
+                width: 27px
+                height: 27px
+                position: absolute
+                border: 1px solid gray
+                border-radius: 50%
+                top: 40%
+                &::before
+                    content: ""
+                    display: inline-block
+                    width: 8px
+                    height: 8px
+                    border-left: 1px solid #000000
+                    border-top: 1px solid #000000
+                    transform: rotate(-45deg)
+                    margin-left: 3px
+                    left: 1px
+                &:first-child
+                    left: -10%
+                &:last-child
+                    right: -10%
+                    &::before
+                        transform: rotate(135deg)
+                        margin-left: 0
+                        margin-right: 3px
+    .button
+        background: $pink-button
+        padding-top: 14px
