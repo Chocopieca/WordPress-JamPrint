@@ -27,3 +27,29 @@ function jamprint_scripts() {
 }
 
 add_theme_support( 'custom-logo' );
+
+$calendars_id = get_cat_ID( 'calendars' );
+$calendars_link = get_category_link( $calendars_id );
+$postcards_id = get_cat_ID( 'postcards' );
+$postcards_link = get_category_link( $postcards_id );
+
+require_once ABSPATH . '/wp-admin/includes/taxonomy.php';
+
+wp_update_term(1, 'category', array(
+    'name' => 'Category',
+    'slug' => 'category',
+    'term_taxonomy_id' => '1',
+    'taxonomy' => 'category',
+));
+
+// wp_inset_term(array(
+
+// ));
+
+// print_r(get_term(1));
+// print_r(get_taxonomies());
+
+// add_filter( 'wp_nav_menu_pbjects', 'change_nav_menu_objects');
+// function change_nav_menu_objects($sorted_menu_items, $args) {
+//     unset($sorted_menu_items['page-item-84']);
+// };

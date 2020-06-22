@@ -11,7 +11,7 @@
 @font-face
 	font-family: 'nether'
 	src: url('../fonts/nether-new/nether.eot')
-	src: local('Nether'), url('../fonts/nether-new/nether.woff') format('woff'), url('../fonts/nether-new/nether.ttf') format('truetype'), url('../fonts/nether-new/nether.svg') format('svg')
+	src: local('☺'), url('../fonts/nether-new/nether.woff') format('woff'), url('../fonts/nether-new/nether.ttf') format('truetype'), url('../fonts/nether-new/nether.svg') format('svg')
 	font-weight: normal
 	font-style: normal
 
@@ -69,14 +69,18 @@ li
     height: 40px
     border-radius: 100px
     background: $blue-button
+    color: $white-text
     box-sizing: border-box
     display: block
     text-align: center
     text-transform: uppercase
     margin: 0 auto
     font-weight: 400
+    font-size: 16px
     p
         color: $white-text
+        text-align: center
+        padding: 14px
 .title
     font-size: 24px
     text-transform: uppercase
@@ -92,9 +96,10 @@ li
     font-size: 50px
     display: flex
     justify-content: center
-    text-align: end
+    text-align: center
     color: $black-text
     font-weight: 500
+    line-height: 140%
 .container
     margin-bottom: 50px
 i, svg
@@ -155,6 +160,44 @@ form
             margin-right: 7px
         .active
             background-color: $dark-gray-text
+.content
+    font-size: 16px
+    color: $light-gray-text
+    margin-bottom: 28px
+    text-align: left
+    overflow-wrap: anywhere
+.jam-card
+    background-color: $soft-pink
+    border-radius: 40px
+    padding: 35px 35px 355px 35px
+    overflow: hidden
+    box-shadow: 0px 7px 10px 2px $box-shadow
+    margin-bottom: 10%
+    p
+        text-align: left
+        color: $white-text
+        font-size: 16px
+        line-height: 27px
+    .jam
+        background: url(../img/jam.png) no-repeat
+        background-size: contain
+        position: absolute
+        bottom: 0
+        right: -20%
+        min-width: 130%
+        min-height: 30%
+        @media ( min-width: 374px )
+            height: 41%
+        @media ( min-width: 425px )
+            height: 51%
+    @media ( min-width: 768px )
+        padding: 67px
+        .jam
+            top: 0
+            bottom: 0
+            right: -40%
+            min-width: 80%
+            min-height: 100%
 // navbar
 .show + .shadow
     position: absolute
@@ -177,6 +220,8 @@ form
     border-radius: 0 0 0 10px
     overflow: scroll
     height: 100vh
+    @media ( min-width: 678px )
+        padding-right: 100px
     ul
         margin-bottom: 115px
         font-size: 18px
@@ -305,7 +350,6 @@ header
                 height: 40px
                 p
                     position: static
-                    margin: 15px 0
         .tablet-baner-one
             p
                 left: 10px
@@ -324,21 +368,11 @@ header
     text-align: center
     position: relative
     img
-        margin-bottom: 19pxs
-    p
-        font-size: 16px
-        color: $light-gray-text
-        margin-bottom: 28px 
-        text-align: left
+        margin-bottom: 19px
     .button
         background: $pink-button
-        color: $white-text
-        padding: 14px
         @media ( max-width: 798 )
             margin: 0 15px
-        p
-            color: $white-text
-            text-align: center
 // catalog-block
 .catalog-block
     .slogan
@@ -364,9 +398,6 @@ header
             top: 0
             width: 69px
             height: 69px
-    .button
-        p
-            margin-top: 14px
     .catalog-card.card-1:before
         background-image: url(../img/top.png)
     .catalog-card.card-2:before
@@ -414,15 +445,11 @@ header
         margin-bottom: 32px
     p
         margin-bottom: 33px
-        color: $light-gray-text
     .button
-        padding-top: 14px
-        background-color: $pink-button
+        background: $pink-button
         @media ( min-width: 768px)
             width: 200px
             margin: 0 15px
-        p
-            color: $white-text
 // form-block
 .form-block
     .title
@@ -513,12 +540,16 @@ footer
         text-transform: none
         font-size: 30px
         margin-bottom: 30px
+    a,p
+        display: inline-block
+        margin-bottom: 25px
+        text-align: center
     .links-block
         text-transform: uppercase
+        display: flex
         text-align: center
-        a,p
-            display: block
-            margin-bottom: 25px
+        justify-content: center
+        margin-bottom: 38px
         p
             color: $light-gray-text
         .help
@@ -571,8 +602,6 @@ footer
                     padding-bottom: 2rem
                 .button
                     width: 200px
-                    p
-                        padding-top: 14px
             .catalog-card
                 text-align: center
                 padding: 0
@@ -588,8 +617,10 @@ footer
         .slogan
             font-size: 3.5rem
             margin-bottom: 3rem
-        .menu
+        .help
             text-align: left
+        .menu
+            text-align: center
         .contact-bottom
             text-align: left
             font-size: 13px
@@ -613,10 +644,6 @@ footer
             div[class|="tablet-baner"]
                 &::before
                     top: -25px
-                .button
-                    p
-                        margin: 14px 0
-                        font-size: 16px
             .tablet-baner-one
                 p
                     left: 10px
@@ -634,10 +661,6 @@ footer
         .print-block
             .content
                 margin: 4rem 0 0
-            .button
-                position: absolute
-                left: 3rem
-                bottom: 1rem
         .catalog-block
             .catalog-way
                 padding-top: 7rem

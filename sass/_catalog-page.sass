@@ -7,6 +7,7 @@
         margin-bottom: 42px
     .catalog-carousel
         .new-category
+            display: block
             border: 1px solid black
             border-radius: 20px
             padding: 10px 0px
@@ -52,9 +53,11 @@
     .button
         background-color: #ffffff
         border: 1px solid grey
+        @media ( min-width: 768px )
+            width: 250px
+            flex: none
         p
             color: $dark-gray-text
-            margin-top: 14px
 .container.inst-block
     margin-bottom: 50px
     title
@@ -98,4 +101,6 @@
                         margin-right: 3px
     .button
         background: $pink-button
-        padding-top: 14px
+        @media ( min-width: 768px )
+            width: 250px
+            flex: none

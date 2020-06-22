@@ -31,7 +31,7 @@ $(".third-carousel").owlCarousel({
     responsive: {
         768:{
             dots: false,
-            nav: true
+            nav: true,
         }
     }
 });
@@ -39,14 +39,18 @@ $(".third-carousel").owlCarousel({
 $('.catalog-carousel').owlCarousel({
     navText: "",
     loop:false,
-    margin:5,
+    margin:10,
     nav:true,
     dots: false,
     items: 1,
     responsive:{
         768:{
             items:3
-        }
+        },
+        998:{
+            items:3,
+            margin:30,
+        },
     }
 });
 

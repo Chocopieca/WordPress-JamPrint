@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   outline: 0px solid green;
 }
@@ -47,6 +48,7 @@ table {
 }
 
 .container.catalog-filters .catalog-carousel .new-category {
+  display: block;
   border: 1px solid black;
   border-radius: 20px;
   padding: 10px 0px;
@@ -116,9 +118,17 @@ table {
   border: 1px solid grey;
 }
 
+@media (min-width: 768px) {
+  .container.cotalog-main .button {
+    width: 250px;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+
 .container.cotalog-main .button p {
   color: #636363;
-  margin-top: 14px;
 }
 
 .container.inst-block {
@@ -185,27 +195,35 @@ table {
 
 .container.inst-block .button {
   background: #ff005d;
-  padding-top: 14px;
 }
 
 @media (min-width: 768px) {
-  .cotact-page .slogan {
+  .container.inst-block .button {
+    width: 250px;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+
+.contact-page h1 {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .contact-page h1 {
     margin-bottom: 60px;
   }
 }
 
-.cotact-page .container {
+.contact-page .container {
   margin-bottom: 84px;
 }
 
 @media (min-width: 768px) {
-  .cotact-page .container {
+  .contact-page .container {
     margin-bottom: 112px;
   }
-}
-
-.cotact-page h1 {
-  margin-bottom: 30px;
 }
 
 .contact-text {
@@ -338,6 +356,7 @@ iframe {
   line-height: 30px;
   margin-bottom: 56px;
   color: #636363;
+  height: 60px;
 }
 
 .owl-carousel.advantages-carousel p {
@@ -353,59 +372,8 @@ iframe {
 }
 
 .owl-carousel.advantages-carousel .button p {
-  margin-top: 7px;
+  padding: 8px;
   color: #adafb3;
-}
-
-.jam-card {
-  background-color: #cc9898;
-  border-radius: 40px;
-  padding: 35px 35px 355px 35px;
-  overflow: hidden;
-  -webkit-box-shadow: 0px 7px 10px 2px #80808040;
-          box-shadow: 0px 7px 10px 2px #80808040;
-}
-
-.jam-card p {
-  text-align: left;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 27px;
-}
-
-.jam-card .jam {
-  background: url(../img/jam.png) no-repeat;
-  background-size: contain;
-  position: absolute;
-  bottom: 0;
-  right: -20%;
-  min-width: 130%;
-  min-height: 30%;
-}
-
-@media (min-width: 374px) {
-  .jam-card .jam {
-    height: 41%;
-  }
-}
-
-@media (min-width: 425px) {
-  .jam-card .jam {
-    height: 51%;
-  }
-}
-
-@media (min-width: 768px) {
-  .jam-card {
-    padding: 67px;
-  }
-  .jam-card .jam {
-    top: 0;
-    bottom: 0;
-    right: -40%;
-    min-width: 80%;
-    min-height: 100%;
-  }
 }
 
 .faq-page .container {
@@ -511,7 +479,7 @@ iframe {
 @font-face {
   font-family: 'nether';
   src: url("../fonts/nether-new/nether.eot");
-  src: local("Nether"), url("../fonts/nether-new/nether.woff") format("woff"), url("../fonts/nether-new/nether.ttf") format("truetype"), url("../fonts/nether-new/nether.svg") format("svg");
+  src: local("☺"), url("../fonts/nether-new/nether.woff") format("woff"), url("../fonts/nether-new/nether.ttf") format("truetype"), url("../fonts/nether-new/nether.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -586,6 +554,7 @@ li a {
   height: 40px;
   border-radius: 100px;
   background: #4771e6;
+  color: #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -593,10 +562,13 @@ li a {
   text-transform: uppercase;
   margin: 0 auto;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .button p {
   color: #ffffff;
+  text-align: center;
+  padding: 14px;
 }
 
 .title {
@@ -624,9 +596,10 @@ li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: end;
+  text-align: center;
   color: #090b0c;
   font-weight: 500;
+  line-height: 140%;
 }
 
 .container {
@@ -719,6 +692,66 @@ form input[type="submit"] {
   background-color: #636363;
 }
 
+.content {
+  font-size: 16px;
+  color: #adafb3;
+  margin-bottom: 28px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.jam-card {
+  background-color: #cc9898;
+  border-radius: 40px;
+  padding: 35px 35px 355px 35px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 7px 10px 2px #80808040;
+          box-shadow: 0px 7px 10px 2px #80808040;
+  margin-bottom: 10%;
+}
+
+.jam-card p {
+  text-align: left;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.jam-card .jam {
+  background: url(../img/jam.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  right: -20%;
+  min-width: 130%;
+  min-height: 30%;
+}
+
+@media (min-width: 374px) {
+  .jam-card .jam {
+    height: 41%;
+  }
+}
+
+@media (min-width: 425px) {
+  .jam-card .jam {
+    height: 51%;
+  }
+}
+
+@media (min-width: 768px) {
+  .jam-card {
+    padding: 67px;
+  }
+  .jam-card .jam {
+    top: 0;
+    bottom: 0;
+    right: -40%;
+    min-width: 80%;
+    min-height: 100%;
+  }
+}
+
 .show + .shadow {
   position: absolute;
   width: 100%;
@@ -743,6 +776,12 @@ form input[type="submit"] {
   border-radius: 0 0 0 10px;
   overflow: scroll;
   height: 100vh;
+}
+
+@media (min-width: 678px) {
+  .navbar {
+    padding-right: 100px;
+  }
 }
 
 .navbar ul {
@@ -922,7 +961,6 @@ header .navbar-top li {
 
 .wrapper .tablet-baner div[class|="tablet-baner"] .button p {
   position: static;
-  margin: 15px 0;
 }
 
 .wrapper .tablet-baner .tablet-baner-one p {
@@ -951,31 +989,17 @@ header .navbar-top li {
 }
 
 .print-block img {
-  margin-bottom: 19pxs;
-}
-
-.print-block p {
-  font-size: 16px;
-  color: #adafb3;
-  margin-bottom: 28px;
-  text-align: left;
+  margin-bottom: 19px;
 }
 
 .print-block .button {
   background: #ff005d;
-  color: #ffffff;
-  padding: 14px;
 }
 
 @media (max-width: 798) {
   .print-block .button {
     margin: 0 15px;
   }
-}
-
-.print-block .button p {
-  color: #ffffff;
-  text-align: center;
 }
 
 .catalog-block .slogan {
@@ -1010,10 +1034,6 @@ header .navbar-top li {
   top: 0;
   width: 69px;
   height: 69px;
-}
-
-.catalog-block .button p {
-  margin-top: 14px;
 }
 
 .catalog-block .catalog-card.card-1:before {
@@ -1090,12 +1110,10 @@ header .navbar-top li {
 
 .business-card-block p {
   margin-bottom: 33px;
-  color: #adafb3;
 }
 
 .business-card-block .button {
-  padding-top: 14px;
-  background-color: #ff005d;
+  background: #ff005d;
 }
 
 @media (min-width: 768px) {
@@ -1103,10 +1121,6 @@ header .navbar-top li {
     width: 200px;
     margin: 0 15px;
   }
-}
-
-.business-card-block .button p {
-  color: #ffffff;
 }
 
 .form-block .title {
@@ -1235,14 +1249,22 @@ footer .slogan {
   margin-bottom: 30px;
 }
 
-footer .links-block {
-  text-transform: uppercase;
+footer a, footer p {
+  display: inline-block;
+  margin-bottom: 25px;
   text-align: center;
 }
 
-footer .links-block a, footer .links-block p {
-  display: block;
-  margin-bottom: 25px;
+footer .links-block {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 38px;
 }
 
 footer .links-block p {
@@ -1308,9 +1330,6 @@ footer .links-block .social a {
   .wrapper .catalog-block .catalog-way .button {
     width: 200px;
   }
-  .wrapper .catalog-block .catalog-way .button p {
-    padding-top: 14px;
-  }
   .wrapper .catalog-block .catalog-card {
     text-align: center;
     padding: 0;
@@ -1329,8 +1348,11 @@ footer .links-block .social a {
     font-size: 3.5rem;
     margin-bottom: 3rem;
   }
-  footer .menu {
+  footer .help {
     text-align: left;
+  }
+  footer .menu {
+    text-align: center;
   }
   footer .contact-bottom {
     text-align: left;
@@ -1364,10 +1386,6 @@ footer .links-block .social a {
   .wrapper .tablet-baner div[class|="tablet-baner"]::before {
     top: -25px;
   }
-  .wrapper .tablet-baner div[class|="tablet-baner"] .button p {
-    margin: 14px 0;
-    font-size: 16px;
-  }
   .wrapper .tablet-baner .tablet-baner-one p {
     left: 10px;
     top: 40px;
@@ -1386,11 +1404,6 @@ footer .links-block .social a {
   }
   .wrapper .print-block .content {
     margin: 4rem 0 0;
-  }
-  .wrapper .print-block .button {
-    position: absolute;
-    left: 3rem;
-    bottom: 1rem;
   }
   .wrapper .catalog-block .catalog-way {
     padding-top: 7rem;
