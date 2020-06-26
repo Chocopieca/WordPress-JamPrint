@@ -198,6 +198,13 @@ form
             right: -40%
             min-width: 80%
             min-height: 100%
+.nav-set
+    .sub-menu
+        display: none
+    li:hover > ul
+        display: block
+.container.header-page
+    margin-bottom: 40px
 // navbar
 .show + .shadow
     position: absolute
@@ -218,7 +225,7 @@ form
     padding: 100px 40px 50px
     z-index: 50
     border-radius: 0 0 0 10px
-    overflow: scroll
+    overflow-y: scroll
     height: 100vh
     @media ( min-width: 678px )
         padding-right: 100px

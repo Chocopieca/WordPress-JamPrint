@@ -4,18 +4,10 @@ Template Name: Contact
 */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('page'); ?>
 
-    <div class="wrapper container-fluid contact-page px-0">
-      <div class="container">
+      <div class="container contact-page">
         <div class="row">
-          <ul class="col-12 px-0 bradcrumb">
-              <li class="breadcrumb-item"><a href="#">home</a></li>
-              <li class="breadcrumb-item">contact</li>
-          </ul>
-
-          <h1 class="col-12 slogan">Get in touch</h1>
-
           <div class="col-12 col-md-5 px-0 order-md-1 social-block">
             <div class="col-12 social">
                 <a href="#"><i class="fab fa-twitter"></i></a>
