@@ -11,19 +11,18 @@ Template Name: FAQ
         </p>
 
         <div class="col-md-6 px-0 faq-block float-md-left">
-          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <!-- Цикл WordPress -->
-            <p>Выводим данные записи. Здесь работают функции для цикла, например, the_title() </p>
-            <h2><?php the_title() ?></h2> 
-          <?php endwhile; else : ?>
-            <p>Записей нет.</p>
-          <?php endif; ?>
-        <?php while ( have_posts() ){ the_post(); ?>
+          
+        <?php 
+        $quastion = new wp_Query( [
+          'category_name' => 'quastion'
+        ]);
+        while ( $quastion->have_posts() ){ $quastion->the_post(); ?>
           <div class="col-12 faq-item">
             <div class="col-12 question">
               <h3><?php the_title() ?></h3>
               <button class="question-button faq-open" type="button"  data-toggle="collapse" data-target="answer-1" ></button>
             </div>
+            <a href="<?php the_permalink() ?>">Somewear</a>
             <div class="col-12 answer" id="answer-1">
               <p><?php the_content() ?></p>
             </div>
