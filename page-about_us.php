@@ -6,12 +6,10 @@ Template Name: About us
 
 <?php get_header('page'); ?>
 
-      <div class="container about-us-page"></div>
+      <div class="container about-us-page">
         <div class="col-12 col-md-8 offset-md-2 about-autor">
-            <div class="portrait"></div>
-            <p>My name is Jane Anders and I love to create 
-              beautiful and inspirational things for you.
-              That’s what I can propose to you:</p>
+            <div class="portrait"><?php the_post_thumbnail() ?></div>
+            <p><?php the_content() ?></p>
         </div>
 
         <div class="owl-carousel advantages-carousel">

@@ -331,10 +331,10 @@ iframe {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-image: url(../img/reviews-face.jpg);
   background-position: 40% 10%;
   position: relative;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -437,8 +437,9 @@ iframe {
 
 .faq-page .faq-block .faq-item .question button {
   cursor: pointer;
-  width: 27px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
   background: transparent;
   border: 1px solid #cc9898;
   border-radius: 50%;
@@ -455,7 +456,7 @@ iframe {
   border-left: 1px solid transparent;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .faq-page .faq-block .faq-item .question .faq-close::after {
@@ -469,7 +470,7 @@ iframe {
   border-left: 1px solid transparent;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
-  margin-bottom: -5px;
+  margin-bottom: 2px;
   margin-left: 1px;
 }
 

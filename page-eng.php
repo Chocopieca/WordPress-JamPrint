@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Main Page eng
+Template Name: Front page eng
 */
 ?>
 
