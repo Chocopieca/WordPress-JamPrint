@@ -15,7 +15,7 @@ Template Name: Contact
                 <a href="<?php echo esc_html (get_option( 'instagram', '' ) ); ?>"><i class="fab fa-instagram"></i></a>
             </div>
 
-            <p class="col-12 px-0 contact-text">We always ready to help you with making an order, clarifying the issue of delivery and payment, discussing your unique wishes, which our shop can fulfill, as well as other questions!</p>
+            <p class="col-12 px-0 contact-text"><?php the_field('form_text')?></p>
           </div>
 
           <div class="col-12 col-md-10 offset-md-1 order-md-3 px-0 contact-info">
@@ -41,25 +41,7 @@ Template Name: Contact
             </div>
           </div>
 
-          <form class="col-12 col-md-6 order-md-2 offset-md-1 form-block px-0">
-            <div class="row mx-0">
-              <div class="col-12 col-md-6">
-                <input placeholder="YOUR NAME">
-              </div>
-
-              <div class="col-12 col-md-6">
-                <input type="email" placeholder="EMAIL">
-              </div>
-
-              <div class="col-12 col-md-12">
-                <textarea name="messege" cols="30" rows="10" placeholder="YOUR MESSAGE..."></textarea>
-              </div>
-
-              <div class="col-12 col-md-5 offset-md-7">
-                <input type="submit" value="send">
-              </div>
-            </div>
-          </form>
+          <div class="col-12 col-md-6 order-md-2 offset-md-1 form-block px-0"><?php the_field('form_code')?></div>
 
           <iframe class="col-12 order-md-4 px-0 google-map" src="<?php echo esc_html (get_option( 'google_maps', '' ) ); ?>" style="border:none;"></iframe>
         </div>

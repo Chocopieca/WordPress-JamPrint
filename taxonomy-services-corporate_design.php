@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Services
-*/
-?>
-
 <?php get_header('page'); ?>
 
       <div class="container catalog_page">

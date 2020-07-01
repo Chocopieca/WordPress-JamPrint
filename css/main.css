@@ -1256,6 +1256,20 @@ header .navbar-top li {
   margin-right: 3px;
 }
 
+.error_404 {
+  min-height: 200px;
+  margin-bottom: 50px;
+}
+
+.error_404 .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 footer .container {
   margin-bottom: 0;
 }

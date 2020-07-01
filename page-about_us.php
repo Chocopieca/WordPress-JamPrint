@@ -13,44 +13,23 @@ Template Name: About us
         </div>
 
         <div class="owl-carousel advantages-carousel">
-          <div class="advantages-item">
-            <img src="/img/advantages-one.png" alt="advabtage">
-            <h2>Postcards
-              & Posters</h2>
-            <p>My name is Jane Anders and I love to create beautiful and inspirational things for you. That’s what I can propose to you.</p>
-            <a href="#" class="button">
-              <p>Shop now</p>
-            </a>
-          </div>
+        <?php
+          query_posts( '&category_name=advantages' );
 
-          <div class="advantages-item">
-            <img src="/img/advantages-two.png" alt="advabtage">
-            <h2>Calendars</h2>
-            <p>My name is Jane Anders and I love to create beautiful and inspirational things for you. That’s what I can propose to you.</p>
-            <a href="#" class="button">
-              <p>Shop now</p>
-            </a>
-          </div>
-          
-          <div class="advantages-item">
-            <img src="/img/advantages-three.png" alt="advabtage">
-            <h2>Business
-              Cooperation</h2>
-            <p>My name is Jane Anders and I love to create beautiful and inspirational things for you. That’s what I can propose to you.</p>
-            <a href="#" class="button">
-              <p>Shop now</p>
-            </a>
-          </div>
-
-          <div class="advantages-item">
-            <img src="/img/advantages-four.png" alt="advabtage">
-            <h2>Corporate
-              Design</h2>
-            <p>My name is Jane Anders and I love to create beautiful and inspirational things for you. That’s what I can propose to you.</p>
-            <a href="#" class="button">
-              <p>Shop now</p>
-            </a>
-          </div>
+          if( have_posts() ){
+            while( have_posts() ){
+              the_post(); ?>
+            <div class="advantages-item">
+              <div><?php the_post_thumbnail() ?></div>
+              <h2><?php the_title(); ?></h2>
+              <p><?php the_content(); ?></p>
+              <a href="#" class="button">
+                <p>Shop now</p>
+              </a>
+            </div>
+            <?php }
+            wp_reset_query();
+          } ?>
         </div>
       </div>
     </div>
