@@ -1,5 +1,5 @@
 <footer class="conteiner-fluid">
-      <div class="container">
+      <div class="container px-0">
         <div class="col-12 jam-card">
           <p class="col-md-6"><?php echo esc_html (get_option( 'business_card', '' ) ); ?></p>
 

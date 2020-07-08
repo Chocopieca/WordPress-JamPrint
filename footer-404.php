@@ -1,5 +1,5 @@
 <footer class="conteiner-fluid">
-      <div class="container">
+      <div class="container px-0">
 
         <h2 class="col-12 px-0 slogan">Things made with love</h2>
 

@@ -174,8 +174,9 @@ function business_card_field_html() {
     $value = get_option( 'business_card', '' );
 	printf( '<textarea id="business_card" name="business_card" style="min-height: 200px; min-width: 500px" placeholder="%s"/></textarea>', esc_attr( $value ) );
 }
-// widget-setting, sidebar
+// news posts
 
+add_action( "the_excerpt", function ($post_excerpt) {return '<div class="content">' . $post_excerpt . '</div>';} );
 
 // Миниатюры
 add_theme_support( 'post-thumbnails' );

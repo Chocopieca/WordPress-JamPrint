@@ -4,7 +4,7 @@ Template Name: About us
 */
 ?>
 
-<?php get_header('page'); ?>
+<?php get_header('single'); ?>
 
       <div class="container about-us-page">
         <div class="col-12 col-md-8 offset-md-2 about-autor">
@@ -20,10 +20,11 @@ Template Name: About us
             while( have_posts() ){
               the_post(); ?>
             <div class="advantages-item">
-              <div><?php the_post_thumbnail() ?></div>
-              <h2><?php the_title(); ?></h2>
+              <div><a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?></a></div>
+              <a href="<?php the_permalink() ?>"><h2><?php the_title(); ?></h2></a>
+              <div class="time"><time><?php the_time('j F Y'); ?></time></div>
               <p><?php the_content(); ?></p>
-              <a href="#" class="button">
+              <a href="<?php the_permalink() ?>" class="button">
                 <p>Shop now</p>
               </a>
             </div>

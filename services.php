@@ -1,4 +1,10 @@
-<?php get_header('page'); ?>
+<?php
+/*
+Template Name: Services
+*/
+?>
+
+<?php get_header('single'); ?>
 
       <div class="container catalog_page">
         <div class="row">

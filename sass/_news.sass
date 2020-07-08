@@ -1,0 +1,93 @@
+.news
+    .news-block
+        padding: 30px
+        margin-bottom: 30px
+        text-align: left
+        color: $light-gray-text
+        border-radius: 20px
+        box-shadow: 0 5px 20px 0 $box-shadow
+        img
+            margin-bottom: 23px
+            border-radius: 20px
+            box-shadow: 0 5px 20px 0 $box-shadow
+        h2
+            margin-bottom: 14px
+            font-size: 20px
+            line-height: 30px
+            color: $dark-gray-text
+        .time
+            margin-bottom: 25px
+        .content
+            font-size: 16px
+        .button
+            background: transparent
+            border: 1px solid $light-gray-text
+            p
+                font-size: 18px
+                color: $light-gray-text
+                padding: 12px
+.pagination
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: 18px
+    div a:hover
+        color: $soft-pink
+    .nav-previous
+        cursor: pointer
+        display: inline-block
+        position: relative
+        margin-left: 41px
+        a
+            color: $light-gray-text
+            &::before
+                content: ""
+                position: absolute
+                left: -41px
+                top: -5px
+                width: 27px
+                height: 27px
+                border-radius: 50%
+                border: 1px solid $light-gray-text
+            &::after
+                content: ""
+                position: absolute
+                left: -30px
+                top: 4px
+                width: 9px
+                height: 9px
+                border-top: 1px solid transparent
+                border-right: 1px solid transparent
+                border-bottom: 1px solid $light-gray-text
+                border-left: 1px solid $light-gray-text
+                transform: rotate( 45deg)
+    .nav-next
+        cursor: pointer
+        display: inline-block
+        position: relative
+        margin-right: 41px
+        a
+            color: $light-gray-text
+            &::after
+                content: ""
+                position: absolute
+                top: -5px
+                right: -41px
+                width: 27px
+                height: 27px
+                border-radius: 50%
+                border: 1px solid $light-gray-text
+            &::before
+                content: ""
+                position: absolute
+                right: -30px
+                top: 4px
+                width: 9px
+                height: 9px
+                border-top: 1px solid $light-gray-text
+                border-right: 1px solid $light-gray-text
+                border-bottom: 1px solid transparent
+                border-left: 1px solid transparent
+                transform: rotate( 45deg)
+
+// news-page

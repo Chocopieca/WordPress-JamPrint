@@ -481,6 +481,140 @@ iframe {
   color: #adafb3;
 }
 
+.news .news-block {
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #adafb3;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 5px 20px 0 #80808040;
+          box-shadow: 0 5px 20px 0 #80808040;
+}
+
+.news .news-block img {
+  margin-bottom: 23px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 5px 20px 0 #80808040;
+          box-shadow: 0 5px 20px 0 #80808040;
+}
+
+.news .news-block h2 {
+  margin-bottom: 14px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #636363;
+}
+
+.news .news-block .time {
+  margin-bottom: 25px;
+}
+
+.news .news-block .content {
+  font-size: 16px;
+}
+
+.news .news-block .button {
+  background: transparent;
+  border: 1px solid #adafb3;
+}
+
+.news .news-block .button p {
+  font-size: 18px;
+  color: #adafb3;
+  padding: 12px;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+}
+
+.pagination div a:hover {
+  color: #cc9898;
+}
+
+.pagination .nav-previous {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin-left: 41px;
+}
+
+.pagination .nav-previous a {
+  color: #adafb3;
+}
+
+.pagination .nav-previous a::before {
+  content: "";
+  position: absolute;
+  left: -41px;
+  top: -5px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: 1px solid #adafb3;
+}
+
+.pagination .nav-previous a::after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #adafb3;
+  border-left: 1px solid #adafb3;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.pagination .nav-next {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin-right: 41px;
+}
+
+.pagination .nav-next a {
+  color: #adafb3;
+}
+
+.pagination .nav-next a::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -41px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: 1px solid #adafb3;
+}
+
+.pagination .nav-next a::before {
+  content: "";
+  position: absolute;
+  right: -30px;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  border-top: 1px solid #adafb3;
+  border-right: 1px solid #adafb3;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 @font-face {
   font-family: 'nether';
   src: url("../fonts/nether-new/nether.eot");
@@ -537,7 +671,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #636363;
+  color: #cc9898;
 }
 
 a:focus, button:focus {
@@ -1257,17 +1391,41 @@ header .navbar-top li {
 }
 
 .error_404 {
-  min-height: 200px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .error_404 {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
 }
 
 .error_404 .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.error_404 .text_error {
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .error_404 .text_error {
+    text-align: right;
+  }
+}
+
+.error_404 .img_error {
+  height: 200px;
+  background: url(../img/404.png) no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 footer .container {

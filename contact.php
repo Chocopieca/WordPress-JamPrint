@@ -4,7 +4,7 @@ Template Name: Contact
 */
 ?>
 
-<?php get_header('page'); ?>
+<?php get_header('single'); ?>
 
       <div class="container contact-page">
         <div class="row">

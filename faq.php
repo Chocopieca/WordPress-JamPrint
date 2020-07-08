@@ -4,7 +4,7 @@ Template Name: FAQ
 */
 ?>
 
-<?php get_header('page'); ?>
+<?php get_header('single'); ?>
 
       <div class="container faq-page">
         <div class="col-12 col-md-6 offset-md-3 faq-text"><?php the_content() ?></div>
@@ -20,10 +20,10 @@ Template Name: FAQ
               <div class="col-12 question">
                 <h3><?php the_title() ?></h3>
                 <div>
-                  <button class="question-button faq-open" type="button"  data-toggle="collapse" data-target="answer-1" ></button>
+                  <button class="question-button faq-open" type="button"  data-toggle="collapse" data-target="answer-<?php the_ID() ?>" ></button>
                 </div>
               </div>
-              <div class="col-12 answer" id="answer-1">
+              <div class="col-12 answer" id="answer-<?php the_ID() ?>">
                 <p><?php the_content() ?></p>
               </div>
             </div>
